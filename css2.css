@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center; /* Centre le texte horizontalement */
+    margin-top: 120px; /* Ajoute une marge en haut (optionnel) */
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    opacity: .6;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #060709;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+
+nav a:hover {
+    color: gray ; /* Souligné au survol des liens */
+}
+
+body {
+    background-image: url("stars-backgrounds-wallpaper.jpg"); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir l'ensemble de la page */
+    background-position: center; /* Centre l'image sur la page */
+    height: 100vh; /* Garantit que la hauteur de l'image est égale à la hauteur de la fenêtre du navigateur */
+    color: #ededed;
+}
+
+.vinyle {
+    
+    text-align: center;
+}
+.vinyle img {
+    width: 400px; /* Ajustez la largeur selon vos besoins */
+    height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement */
+    transition: transform 0.3s ease-in-out;
+}
+  
+.vinyle img:hover {
+    transform: scale(1.1); /* Changez la valeur selon vos besoins */
+}
+
+.vinyle a img[alt="anti"] {
+    width: 23%; /* ou une autre valeur en pourcentage */
+    height: auto; /* Cela maintient le rapport largeur/hauteur et évite la distorsion */
+    margin-bottom: 20px;
+}
+
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
